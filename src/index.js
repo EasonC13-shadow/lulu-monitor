@@ -280,6 +280,15 @@ function startCommandServer() {
     }
   });
   
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      log('⚠️ Port 4441 already in use, command server disabled');
+      log('   (Another instance may be running)');
+    } else {
+      log('❌ Command server error:', err.message);
+    }
+  });
+  
   server.listen(4441, '127.0.0.1', () => {
     log('📡 Command server listening on http://127.0.0.1:4441');
   });
