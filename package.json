@@ -1,0 +1,30 @@
+{
+  "name": "lulu-monitor",
+  "version": "0.1.0",
+  "description": "Monitor LuLu Firewall alerts and forward to OpenClaw for remote management",
+  "main": "src/index.js",
+  "bin": {
+    "lulu-monitor": "./bin/lulu-monitor.js"
+  },
+  "scripts": {
+    "start": "node bin/lulu-monitor.js",
+    "dev": "node bin/lulu-monitor.js --verbose"
+  },
+  "keywords": [
+    "lulu",
+    "firewall",
+    "macos",
+    "openclaw",
+    "security"
+  ],
+  "author": "EasonC13",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EasonC13-shadow/lulu-monitor.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {}
+}
